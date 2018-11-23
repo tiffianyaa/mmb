@@ -28,7 +28,81 @@
 
   <!-- 产品 -->
   <div class="mmb_product">
-    
+    <div class="product_title">
+      <a href="index.html">首页</a>
+      <span> > </span>
+      <a href="category.html">全部分类</a>
+      <span> > </span>
+      <a href="#">电视</a>
+      <span> > </span>
+      <button>筛选</button>
+    </div>
+    <div class="product_content">
+      <ul>
+        <li class="item">
+          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
+            <div class="img mui-pull-left">
+              <!-- {{@v.productImgSm}} -->
+              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+            </div>
+            <div class="detail mui-pull-right">
+              <div class="detail_top"><span>{{ v.productName }}</span></div>
+              <div class="detail_bottom">
+                <p class="price">{{ v.productPinkage }}</p>
+                <p><span>报价</span>    <span>评论</span></p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
+            <div class="img mui-pull-left">
+              <!-- {{@v.productImgSm}} -->
+              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+            </div>
+            <div class="detail mui-pull-right">
+              <div class="detail_top"><span>{{ v.productName }}</span></div>
+              <div class="detail_bottom">
+                <p class="price">{{ v.productPinkage }}</p>
+                <p><span>报价</span>    <span>评论</span></p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="item">
+          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
+            <div class="img mui-pull-left">
+              <!-- {{@v.productImgSm}} -->
+              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
+            </div>
+            <div class="detail mui-pull-right">
+              <div class="detail_top"><span>{{ v.productName }}</span></div>
+              <div class="detail_bottom">
+                <p class="price">{{ v.productPinkage }}</p>
+                <p><span>报价</span>    <span>评论</span></p>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="paginator">
+      <div class="prevBox">
+        <button class="prev mui-pull-left">上一页</button>
+      </div>
+      <div class="pageBox">
+        <button class="page mui-pull-left">1/3</button>
+        <span class="mui-navigate-right"></span>
+        <ul class="page">
+          <li>1/3</li>
+          <li>2/3</li>
+          <li>3/3</li>
+        </ul>
+      </div>
+      <div class="nextBox">
+        <button class="next mui-pull-left">上一页</button>
+      </div>
+    </div>
   </div>
   
   <!-- 底部 -->
@@ -46,21 +120,17 @@
 </div>
 
 <!-- 模版引擎 -->
-<script type="text/html" id="navTmp">
+<script type="text/html" id="productTmp">
   {{ each result v i }}
     
   {{ /each }}
 </script>
 
-<script type="text/html" id="discountTmp">
-  {{ each result v i }}
-    
-  {{ /each }}
-</script>
 
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/productList.js"></script>
 </body>
 </html>

@@ -24,7 +24,7 @@ $(function(){
             console.log(info);            
             that.next().html(template('sonTmp',info));
             // 显示隐藏功能
-            that.next().slideToggle();
+            that.next().stop().slideToggle().parent().siblings().find('ul').stop().slideUp();
           }
         });
         
