@@ -36,9 +36,7 @@
 
     <!-- 商品展示 -->
     <div class="product_desc">   
-      <h3>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</h3>
-      <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015515937123.png">
-      <button>收藏</button>
+      <!-- 挖个坑 -->
     </div>
 
     <!-- 商品小表格 -->
@@ -52,6 +50,7 @@
     <div class="product_buy">
       <div class="buy_top">
           <!-- http://sf.manmanbuy.com/images/sitelogo/4.png -->
+          <!-- 挖个坑 -->
       </div>
       <div class="buy_bottom">
           * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
@@ -62,33 +61,7 @@
       <div class="comment_title">网友评价</div>
       <div class="comment_content">
         <ul>
-          <li class="comItem">
-            <div class="com_title mui-clearfix">
-              <p class="com_title mui-clearfix"><span class="mui-pull-left">千***儿</span><span class="mui-pull-right">千***儿</span></p>
-              <p class="mui-pull-right">购买自：京东商城</p>
-            </div>
-            <div class="com_content">   
-          商品只有飞利浦的原包装盒，包装盒外没有封条，盒子比较旧，开口处很多褶皱，明显不是全新产品，里面的塑料袋也是旧的，而且还有破洞。要求更换了一次，但并没有任何改变，而且换货的师傅不给我看新换的包装，要求我直接拿熨斗下楼去换，直接熨斗换熨斗，但换来的熨斗的塑料包装也是旧的。产品使用没有太大问题，而且急着使用，所以不想折腾，没有再次更换。对本次购物非常不满意！
-            </div>
-          </li>
-          <li class="comItem">
-            <div class="com_title mui-clearfix">
-              <p class="com_title mui-clearfix"><span class="mui-pull-left">千***儿</span><span class="mui-pull-right">千***儿</span></p>
-              <p class="mui-pull-right">购买自：京东商城</p>
-            </div>
-            <div class="com_content">   
-          商品只有飞利浦的原包装盒，包装盒外没有封条，盒子比较旧，开口处很多褶皱，明显不是全新产品，里面的塑料袋也是旧的，而且还有破洞。要求更换了一次，但并没有任何改变，而且换货的师傅不给我看新换的包装，要求我直接拿熨斗下楼去换，直接熨斗换熨斗，但换来的熨斗的塑料包装也是旧的。产品使用没有太大问题，而且急着使用，所以不想折腾，没有再次更换。对本次购物非常不满意！
-            </div>
-          </li>
-          <li class="comItem">
-            <div class="com_title mui-clearfix">
-              <p class="com_title mui-clearfix"><span class="mui-pull-left">千***儿</span><span class="mui-pull-right">千***儿</span></p>
-              <p class="mui-pull-right">购买自：京东商城</p>
-            </div>
-            <div class="com_content">   
-          商品只有飞利浦的原包装盒，包装盒外没有封条，盒子比较旧，开口处很多褶皱，明显不是全新产品，里面的塑料袋也是旧的，而且还有破洞。要求更换了一次，但并没有任何改变，而且换货的师傅不给我看新换的包装，要求我直接拿熨斗下楼去换，直接熨斗换熨斗，但换来的熨斗的塑料包装也是旧的。产品使用没有太大问题，而且急着使用，所以不想折腾，没有再次更换。对本次购物非常不满意！
-            </div>
-          </li>
+          <!-- 挖个坑 -->
         </ul>
       </div>
     </div>
@@ -113,26 +86,44 @@
   </div>
 </div>
 
-<!-- 模版引擎分类标题 -->
+<!-- 模版引擎三级标题 -->
 <script type="text/html" id="cateNameTmp">
-  {{ each result v i }}
     <a href="index.html">首页</a>
     <span> > </span>
-    <a href="category.html">全部分类</a>
+    <a href="productlist.html?categoryid={{ categoryid }}">{{ category }}</a>
     <span> > </span>
     <span class="category">
-      <a href="javascript:;">豆浆机</a>
+      <a href="javascript:;">{{ productName }}</a>
     </span>
     <span> > </span>
     <button>筛选</button>
-  {{ /each }}
 </script>
 
 
-<!-- 模版引擎产品列表 -->
+<!-- 模版引擎商品展示 -->
+<script type="text/html" id="descTmp">
+  {{ each result v i }}
+    <h3>{{ v.productName }}</h3>
+    {{@v.productImg}}
+    <button>收藏</button>
+  {{ /each }}
+</script>
+
+<!-- 模版引擎购买顶部 -->
+<script type="text/html" id="buyTmp">
+  {{@result[0].bjShop}}
+</script>
+
+<!-- 模版引擎商品评论 -->
 <script type="text/html" id="productTmp">
   {{ each result v i }}
-    
+    <li class="comItem">
+      <div class="com_title mui-clearfix">
+        <p class="com_title mui-clearfix"><span class="mui-pull-left">{{ v.comName }}</span><span class="mui-pull-right">{{ v.comTime }}</span></p>
+        <p class="mui-pull-right">{{ v.comFrom }}</p>
+      </div>
+      <div class="com_content"> {{ v.comContent }} </div>
+    </li>
   {{ /each }}
 </script>
 

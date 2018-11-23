@@ -61,6 +61,40 @@
     .buy_top {
       height: 90rem/@base;
       border-bottom: 1rem/@base solid #eee;
+      table {
+        height: 100%;
+        tr:first-child {
+          height: 100%;
+          td {
+            &:first-child {
+              padding-left: 20rem/@base;
+              img {
+                width: 30rem/@base;
+                height: 30rem/@base;
+                margin-top: 30rem/@base;
+              }
+            }
+            &:nth-child(2){
+              position: relative;
+              a {
+                position: absolute;
+                left: 20rem/@base;
+                top: 36rem/@base;
+                font-size: 15rem/@base;
+                width: 90rem/@base;
+              }
+            }
+            &:nth-child(3){
+              padding-left: 380rem/@base;
+              color:#D10311;
+              font-size: 32rem/@base;
+            }
+            &:last-child {
+              padding-right: 20rem/@base;
+            }
+          }
+        }
+      }
     }
     .buy_bottom {
       height: 120rem/@base;
