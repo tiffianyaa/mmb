@@ -1,0 +1,142 @@
+@import "normalize";
+@import "base";
+@import "variable";
+@import "common";
+
+
+
+// 导航栏
+.mmb_nav {
+  background-color: #fff;
+  padding: 20rem/@base 0;
+  margin-bottom: 10rem/@base;
+  margin-top: 15rem/@base;
+  li {
+    width: 25%;
+    float: left;
+    margin-top: 20rem/@base;
+    a {
+      display: block;
+      text-align: center;
+      &.hide {
+        display: none;
+      }
+      img {
+        width: 90rem/@base;
+        height: 90rem/@base;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 20rem/@base;
+        color: #323322;
+        margin-top: 8rem/@base;
+      }
+    }
+  }
+}
+
+// 折扣推荐
+.mmb_discount {
+  .discount_title {
+    height: 70rem/@base;
+    background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+    position: relative;
+    border-bottom: 1rem/@base solid @bdColor;
+    p {
+      font-size: 30rem/@base;
+      color: #fff;
+      line-height: 70rem/@base;
+      padding-left: 20rem/@base;
+    }
+    i {
+      position: absolute;
+      top: 15rem/@base;
+      right: 20rem/@base;
+      width: 40rem/@base;
+      height: 40rem/@base;
+      background: url("../images/more.png") no-repeat center;
+      background-size: 40rem/@base 40rem/@base;
+    }
+  }
+  .discount_content {
+    li {
+      height: 260rem/@base;
+      background-color: #fff;
+      border-bottom: 1rem/@base solid @bdColor;
+      a {
+        display: block;
+        .img {
+          height: 260rem/@base;
+          width: 30%;
+          padding: 20rem/@base;
+        }
+        .detail {
+          height: 260rem/@base;
+          width: 70%;
+          padding: 30rem/@base;
+          padding-left: 0;
+          position: relative;
+          .detail_top {
+            font-size: 26rem/@base;
+            line-height: 35rem/@base;
+            .price {
+              margin-left: 10rem/@base;
+              color: #FF6C00;
+            }
+          }
+          .detail_bottom {
+            position: absolute;
+            bottom: 50rem/@base;
+            left: 0;
+            width: 100%;
+            padding-right: 30rem/@base;
+            color: #949297;
+            font-size: 20rem/@base;
+          }
+        }
+      }
+    }
+  }
+  .discount_more {
+    height: 80rem/@base;
+    padding: 20rem/@base 20rem/@base 0;
+    background-color: #fff;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 25rem/@base;
+      line-height: 60rem/@base;
+      text-align: center;
+      border: 1rem/@base solid #dddddd;
+      background-color: #F4F4F4;
+      background-image: linear-gradient(#ffffff, #f4f4f4);
+    }
+  }
+}
+
+// 品牌排行
+.mmb_brand {
+  height: 70rem/@base;
+  margin-top: 20rem/@base;
+  margin-bottom: 50rem/@base;
+  background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+  position: relative;
+  border-bottom: 1rem/@base solid @bdColor;
+  p {
+    font-size: 30rem/@base;
+    color: #fff;
+    line-height: 70rem/@base;
+    padding-left: 20rem/@base;
+  }
+  i {
+    position: absolute;
+    top: 15rem/@base;
+    right: 20rem/@base;
+    width: 40rem/@base;
+    height: 40rem/@base;
+    background: url("../images/more.png") no-repeat center;
+    background-size: 40rem/@base 40rem/@base;
+  }
+}
+

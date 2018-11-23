@@ -1,0 +1,92 @@
+// 公共容器
+.mmb_container {
+  width: 100%;
+  // height: 2500px;
+  background-color: #efefef;
+}
+
+// 公共头部
+.mmb_header {
+  height: 98rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1px solid @bdColor;
+  a {
+    height: 100%;
+    &.logo {
+      width: 371rem/@base;
+      padding: 24rem/@base;
+    }
+    &.app {
+      width: 90rem/@base;
+      padding: 15rem/@base;
+    }
+  }
+}
+
+// 公共搜索框
+.mmb_search {
+  height: 100rem/@base;
+  background-color: #fff;
+  padding: 20rem/@base;
+  padding-right: 150rem/@base;
+  position: relative;
+  input {
+    display: inline-block;
+    width: 570rem/@base;
+    background-color: @bdColor;
+    height: 60rem/@base;
+    margin: 0;
+    padding: 0;
+    padding-left: 40rem/@base;
+    border-radius: 30rem/@base;
+    font-size: 25rem/@base;
+  }
+  button {
+    position: absolute;
+    top: 20rem/@base;
+    right: 20rem/@base;
+    width: 130rem/@base;
+    height: 60rem/@base;
+    border-radius: 30rem/@base;
+    background-color: @mainColor;
+    color: #fff;
+    font-size: 30rem/@base;
+    line-height: 32rem/@base;
+  }
+}
+
+
+// 公共底部
+.mmb_footer {
+  .footer_top {
+    height: 65rem/@base;
+    padding: 0 20rem/@base;
+    line-height: 65rem/@base;
+    border-top: 1rem/@base solid #bbb;
+    border-bottom: 1rem/@base solid #bbb;
+    a {
+      width: 33.3%;
+      float: left;
+      text-align: center;
+      font-size: 18rem/@base;
+      &:nth-child(2){
+        border-left: 1rem/@base solid #bbb;
+        border-right: 1rem/@base solid #bbb;
+      }
+    }
+  }
+  .footer_bottom {
+    padding: 30rem/@base 0;
+    text-align: center;
+    p {
+      font-size: 22rem/@base;
+      span:first-child {
+        color: red;
+        margin-right: 3rem/@base;
+      }
+      span:nth-child(2){
+        color: #333359;
+      }
+    }
+  }
+}

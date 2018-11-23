@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买首页</title>
+  <link rel="stylesheet" href="././lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- 在头部引入rem适配的包 -->
+  <script src="./lib/flexible/flexible.js"></script> 
+</head>
+<body>
+<!-- 全屏容器 -->
+<div class="mmb_container">
+
+  <!-- 头部 -->
+  <div class="mmb_header">
+    <a href="index.html" class="logo mui-pull-left"><img src="./images/header_logo.png"></a>
+    <a href="#" class="app mui-pull-right"><img src="./images/header_app.png"></a>
+  </div>
+
+  <!-- 搜索框 -->
+  <div class="mmb_search">
+    <input type="text" placeholder="请输入你想比价的商品">
+    <button>搜索</button>
+  </div>
+
+  <!-- 导航栏 -->
+  <div class="mmb_nav">
+    <ul class="mui-clearfix">     
+      <!-- 挖第一个坑 -->
+    </ul>
+  </div>
+
+  <!-- 折扣推荐 -->
+  <div class="mmb_discount">
+    <div class="discount_title">
+      <p>超值折扣推荐</p>
+      <i></i>
+    </div>
+    <div class="discount_content">
+      <ul>
+        <!-- 挖第二个坑 -->
+      </ul>
+    </div>
+    <div class="discount_more">
+      <a href="#">更多优惠信息>></a>
+    </div>
+  </div>
+
+  <!-- 品牌排行 -->
+  <div class="mmb_brand">
+    <p>品牌排行</p>
+    <i></i>
+  </div>
+
+  <!-- 底部 -->
+  <div class="mmb_footer">
+    <div class="footer_top">
+      <a href="javascript:;">登录</a>
+      <a href="javascript:;">注册 </a>
+      <a href="#">返回顶部</a>
+    </div>
+    <div class="footer_bottom">
+      <p><span class=".red">手机APP下载</span><span>慢慢买手机版</span> <span>--掌上比价平台</span></p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+</div>
+
+<!-- 模版引擎 -->
+<script type="text/html" id="navTmp">
+  {{ each result v i }}
+    <li>
+      <a href="{{ v.titlehref }}" class="{{ i===7?'more':''}} {{ i>7?'hide over':''}}">
+        {{@v.img}}
+        <p>{{ v.name }}</p>
+      </a>
+    </li>
+  {{ /each }}
+</script>
+
+<script type="text/html" id="discountTmp">
+  {{ each result v i }}
+    <li class="item">
+      <a href="#" class="mui-clearfix">
+        <div class="img mui-pull-left">
+          {{@v.productImgSm}}
+          <!-- <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L"> -->
+        </div>
+        <div class="detail mui-pull-right">
+          <div class="detail_top"><span>{{ v.productName }}</span><span class="price">{{ v.productPinkage }}</span></div>
+          <div class="detail_bottom">
+            <span class="mui-pull-left">{{ v.productFrom }} | {{ v.productTime }}</span>
+            <span class="mui-pull-right">{{ v.productComCount }}</span>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{ /each }}
+</script>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
