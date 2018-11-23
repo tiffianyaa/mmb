@@ -1,0 +1,117 @@
+@import "normalize";
+@import "base";
+@import "variable";
+@import "common";
+
+// 产品
+.mmb_product {
+  background-color: #fff;
+  // 商品展示
+  .product_desc {
+    height: 500rem/@base;
+    background-color: #fff;
+    padding: 40rem/@base;
+    position: relative;
+    h3 {
+      text-align: center;
+      font-size: 28rem/@base;
+      line-height: 50rem/@base;
+    }
+    img {
+      width: 335rem/@base;
+      height: 310rem/@base;
+      margin: 0 auto;
+    }
+    button {
+      width: 80rem/@base;
+      height: 80rem/@base;
+      border-radius: 50%;
+      background-color: #95D800;
+      color: #fff;
+      position: absolute;
+      bottom: 40rem/@base;
+      right: 50rem/@base;
+      font-size: 25rem/@base;
+    }
+  }
+  // 商品小表格
+  .product_table {
+    display: flex;
+    height: 65rem/@base;
+    background-color: #FFC62A;
+    border-top: 1rem/@base solid #D84D00;
+    border-bottom: 1rem/@base solid #D84D00;
+    div {
+      line-height: 65rem/@base;
+      font-size: 25rem/@base;
+      color: #fff;
+      flex: 1;
+      text-align: center;
+      &:nth-child(2){
+        border-left: 1rem/@base solid #D84D00;
+        border-right: 1rem/@base solid #D84D00;
+      }
+      &.active {
+        background-color: #FF9D1E;
+      }
+    }
+  }
+  // 商品购买
+  .product_buy {
+    .buy_top {
+      height: 90rem/@base;
+      border-bottom: 1rem/@base solid #eee;
+    }
+    .buy_bottom {
+      height: 120rem/@base;
+      padding: 30rem/@base;
+      line-height: 30rem/@base;
+      font-size: 22rem/@base;
+      color: #666;
+      border-bottom: 3rem/@base solid #6E6E6E;
+    }
+  }
+  // 商品评论
+  .product_comment {
+    margin-top: 2rem/@base;
+    .comment_title {
+      background-color: #DBDBDB;
+      height: 65rem/@base;
+      text-align: center;
+      line-height: 65rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+      border-top: 1rem/@base solid #ccc;
+      font-size: 25rem/@base;
+      font-weight: bold;
+    }
+    .comment_content {
+      li {
+        padding: 20rem/@base;
+        border-bottom: 1rem/@base solid #ccc;
+        .com_title {
+          font-size: 20rem/@base;
+          p {
+            font-size: 20rem/@base;
+            line-height: 35rem/@base;
+          }
+        }
+        .com_content {
+          font-size: 21rem/@base;
+          line-height: 40rem/@base;;
+        }
+      }
+    }
+  }
+  // 更多评论
+  .product_more {
+    padding: 30rem/@base 15rem/@base 50rem/@base;
+    text-align: center;
+    a {
+      display: block;
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      background-image: linear-gradient(to bottom,#fff,#ccc);
+      border: 1rem/@base solid @bdColor;
+    }
+  }
+}
