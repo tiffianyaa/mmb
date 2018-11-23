@@ -33,57 +33,15 @@
       <span> > </span>
       <a href="category.html">全部分类</a>
       <span> > </span>
-      <a href="#">电视</a>
+      <span class="category">
+        <!-- 挖个小坑 -->
+      </span>
       <span> > </span>
       <button>筛选</button>
     </div>
     <div class="product_content">
       <ul>
-        <li class="item">
-          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
-            <div class="img mui-pull-left">
-              <!-- {{@v.productImgSm}} -->
-              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
-            </div>
-            <div class="detail mui-pull-right">
-              <div class="detail_top"><span>{{ v.productName }}</span></div>
-              <div class="detail_bottom">
-                <p class="price">{{ v.productPinkage }}</p>
-                <p><span>报价</span>    <span>评论</span></p>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="item">
-          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
-            <div class="img mui-pull-left">
-              <!-- {{@v.productImgSm}} -->
-              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
-            </div>
-            <div class="detail mui-pull-right">
-              <div class="detail_top"><span>{{ v.productName }}</span></div>
-              <div class="detail_bottom">
-                <p class="price">{{ v.productPinkage }}</p>
-                <p><span>报价</span>    <span>评论</span></p>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="item">
-          <a href="moneyproduct.html?productid={{ v.productId }}" class="mui-clearfix">
-            <div class="img mui-pull-left">
-              <!-- {{@v.productImgSm}} -->
-              <img src="http://cacheimg.manmanbuy.com/r_img/cacheimg.aspx?&amp;imgurl=http://a.manmanbuy.com:8013/cuxiaoPic/201610/201610001412282758.jpg" alt="移动端凑单品：海天 鲜味 生抽 1.28L">
-            </div>
-            <div class="detail mui-pull-right">
-              <div class="detail_top"><span>{{ v.productName }}</span></div>
-              <div class="detail_bottom">
-                <p class="price">{{ v.productPinkage }}</p>
-                <p><span>报价</span>    <span>评论</span></p>
-              </div>
-            </div>
-          </a>
-        </li>
+        <!-- 挖个大坑 -->
       </ul>
     </div>
     <div class="paginator">
@@ -93,14 +51,12 @@
       <div class="pageBox">
         <button class="page mui-pull-left">1/3</button>
         <span class="mui-navigate-right"></span>
-        <ul class="page">
-          <li>1/3</li>
-          <li>2/3</li>
-          <li>3/3</li>
+        <ul class="page hide">
+          <!-- 挖个小坑 -->
         </ul>
       </div>
       <div class="nextBox">
-        <button class="next mui-pull-left">上一页</button>
+        <button class="next mui-pull-left">下一页</button>
       </div>
     </div>
   </div>
@@ -119,12 +75,42 @@
   </div>
 </div>
 
-<!-- 模版引擎 -->
-<script type="text/html" id="productTmp">
+<!-- 模版引擎分类标题 -->
+<script type="text/html" id="cateNameTmp">
   {{ each result v i }}
-    
+    <a href="#">{{ v.category }}</a>
   {{ /each }}
 </script>
+
+
+<!-- 模版引擎产品列表 -->
+<script type="text/html" id="productTmp">
+  {{ each result v i }}
+    <li class="item">
+      <a href="bijia.html?productid={{ v.productId }}" class="mui-clearfix">
+        <div class="img mui-pull-left">
+          {{@v.productImg}}
+        </div>
+        <div class="detail mui-pull-right">
+          <div class="detail_top"><span>{{ v.productName }}</span></div>
+          <div class="detail_bottom">
+            <p class="price">{{ v.productPrice }}</p>
+            <p><span>{{ v.productQuote }}</span>    <span>{{ v.productCom }}</span></p>
+          </div>
+        </div>
+      </a>
+    </li>
+  {{ /each }}
+</script>
+
+
+<!-- 模版引擎分页列表 -->
+<script type="text/html" id="pageTmp">
+  <% for(i = 0; i < total; i++) {%>
+    <li data-page={{i+1}}><%=i+1%>/<%=total%></li>
+  <%}%>
+</script>
+
 
 
 <script src="./lib/jquery/jquery.min.js"></script>
