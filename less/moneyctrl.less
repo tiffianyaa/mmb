@@ -1,0 +1,94 @@
+@import "normalize";
+@import "base";
+@import "variable";
+@import "common";
+
+
+// 头部
+.mmb_header {
+  height: 98rem/@base;
+  background-color: @mainColor;
+  border-bottom: 1px solid @bdColor;
+  a {
+    height: 100%;
+    width: 90rem/@base;
+    padding: 15rem/@base;
+    &.back {
+      background: url("../images/icback.svg") no-repeat center;
+      background-size: 35rem/@base 35rem/@base; 
+    }
+  }
+  h3 {
+    text-align: center;
+    line-height: 98rem/@base;
+    margin: 0;
+    font-size: 35rem/@base;
+    color: #fff;
+  }
+}
+
+// 产品内容
+.product_content {
+  li {
+    height: 260rem/@base;
+    background-color: #fff;
+    a {
+      display: block;
+      .img {
+        height: 260rem/@base;
+        width: 30%;
+        padding: 20rem/@base;
+      }
+      .detail {
+        height: 260rem/@base;
+        width: 70%;
+        padding: 30rem/@base;
+        padding-left: 0;
+        position: relative;
+        .detail_top {
+          font-size: 26rem/@base;
+          line-height: 35rem/@base;
+          .price {
+            margin-left: 10rem/@base;
+            color: #FF6C00;
+          }
+        }
+        .detail_bottom {
+          position: absolute;
+          bottom: 50rem/@base;
+          left: 0;
+          width: 100%;
+          padding-right: 30rem/@base;
+          color: #949297;
+          font-size: 20rem/@base;
+        }
+      }
+    }
+  }
+}
+
+// 重定制下分页
+.paginator {
+  div {
+    span {
+      &:after {    
+        content:'>';  
+        transform: rotate(-90deg); 
+      }
+    }
+    &.pageBox {
+      position: relative;
+      ul.page {
+        position: absolute;
+        height: 1050rem/@base;
+        top:-1030rem/@base;
+        left: 50rem/@base;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        text-align: center; 
+        border-top: 1rem/@base solid @bdColor; 
+      }
+    }
+  }
+}

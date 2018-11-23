@@ -334,6 +334,66 @@ img {
 .mmb_footer .footer_bottom p span:nth-child(2) {
   color: #333359;
 }
+.paginator {
+  height: 1.2rem;
+  display: flex;
+}
+.paginator div {
+  flex: 1;
+  padding-left: 0.66666667rem;
+  padding-top: 0.2rem;
+  position: relative;
+}
+.paginator div span {
+  position: absolute;
+  right: 0.66666667rem;
+  top: 0.2rem;
+  width: 0.4rem;
+  height: 0.93333333rem;
+  border: 0.01333333rem solid #989898;
+  background-color: #E1E1E1;
+}
+.paginator div span:after {
+  content: '>';
+  transform: rotate(90deg);
+  position: absolute;
+  left: 0.06666667rem;
+  top: 0.4rem;
+  width: 0.26666667rem;
+  height: 0.26666667rem;
+  color: #000;
+  font-size: 0.26666667rem;
+}
+.paginator div.pageBox {
+  position: relative;
+}
+.paginator div.pageBox ul.page {
+  position: absolute;
+  top: 1.13333333rem;
+  left: 0.66666667rem;
+  background-color: #fff;
+  border: 0.01333333rem solid #cccccc;
+  border-top: none;
+  text-align: center;
+}
+.paginator div.pageBox ul.page.hide {
+  display: none;
+}
+.paginator div.pageBox ul.page li {
+  width: 1.97333333rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  font-size: 0.33333333rem;
+  border-bottom: 0.01333333rem solid #e9e9e9;
+}
+.paginator div button {
+  width: 2rem;
+  height: 0.93333333rem;
+  line-height: 0.53333333rem;
+  margin: 0 auto;
+  display: block;
+  font-size: 0.4rem;
+}
 .mmb_category {
   background-color: #fff;
   padding-bottom: 0.66666667rem;

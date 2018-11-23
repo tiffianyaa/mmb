@@ -1,20 +1,4 @@
 $(function(){
-  // 从地址栏传递的参数中获取categoryid 
-  var categoryid = getSearch("categoryid");
-  //1.根据分类id渲染产品标题
-  $.ajax({
-    url:'http://127.0.0.1:9090/api/getcategorybyid',
-    data:{
-      categoryid:categoryid
-    },
-    dataType:'json',
-    success:function(info){
-      console.log(info);
-      $('.product_title .category').html(template("cateNameTmp",info));
-    }
-  });
-
-
   render();
   var total;
   var currentPage=1;
@@ -22,10 +6,9 @@ $(function(){
   function render(currentPage){
     currentPage = currentPage || 1;
     $.ajax({
-      url:'http://127.0.0.1:9090/api/getproductlist',
+      url:'http://127.0.0.1:9090/api/getmoneyctrl',
       data:{
-        categoryid:categoryid,
-        pageid:currentPage
+        pageid:currentPage -1
       },
       dataType:'json',
       success:function(info){
@@ -52,8 +35,8 @@ $(function(){
     var str = $(this).text();
     $('.pageBox button').text(str);
     currentPage = $(this).data("page");
-    render(currentPage);    
-    $('.pageBox .page').toggleClass('hide'); 
+    render(currentPage); 
+    $('.pageBox .page').toggleClass('hide');   
   })
 
   // 下一页

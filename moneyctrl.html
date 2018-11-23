@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
   <link rel="stylesheet" href="././lib/mui/css/mui.css">
-  <link rel="stylesheet" href="./css/productList.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
   <!-- 在头部引入rem适配的包 -->
   <script src="./lib/flexible/flexible.js"></script> 
 </head>
@@ -16,32 +16,16 @@
 
   <!-- 头部 -->
   <div class="mmb_header">
-    <a href="index.html" class="logo mui-pull-left"><img src="./images/header_logo.png"></a>
+    <a class="mui-pull-left back" href="javascript:history.back(-1);"></a>
     <a href="#" class="app mui-pull-right"><img src="./images/header_app.png"></a>
-  </div>
-
-  <!-- 搜索框 -->
-  <div class="mmb_search">
-    <input type="text" placeholder="请输入你想比价的商品">
-    <button>搜索</button>
+    <h3>省钱控-最新优惠</h3>
   </div>
 
   <!-- 产品 -->
   <div class="mmb_product">
-    <div class="product_title">
-      <a href="index.html">首页</a>
-      <span> > </span>
-      <a href="category.html">全部分类</a>
-      <span> > </span>
-      <span class="category">
-        <!-- 挖个小坑 -->
-      </span>
-      <span> > </span>
-      <button>筛选</button>
-    </div>
     <div class="product_content">
       <ul>
-        <!-- 挖个大坑 -->
+        <!-- 挖个坑 -->
       </ul>
     </div>
     <div class="paginator">
@@ -75,27 +59,20 @@
   </div>
 </div>
 
-<!-- 模版引擎分类标题 -->
-<script type="text/html" id="cateNameTmp">
-  {{ each result v i }}
-    <a href="#">{{ v.category }}</a>
-  {{ /each }}
-</script>
-
 
 <!-- 模版引擎产品列表 -->
 <script type="text/html" id="productTmp">
   {{ each result v i }}
     <li class="item">
-      <a href="bijia.html?productid={{ v.productId }}" class="mui-clearfix">
+      <a href="moneyproduct.html?productid={{v.productId }}" class="mui-clearfix">
         <div class="img mui-pull-left">
-          {{@v.productImg}}
+          {{@v.productImgSm}}
         </div>
         <div class="detail mui-pull-right">
-          <div class="detail_top"><span>{{ v.productName }}</span></div>
+          <div class="detail_top"><span>{{ v.productName }}</span><span class="price">{{ v.productPinkage }}</span></div>
           <div class="detail_bottom">
-            <p class="price">{{ v.productPrice }}</p>
-            <p><span>{{ v.productQuote }}</span>    <span>{{ v.productCom }}</span></p>
+            <span class="mui-pull-left">{{ v.productFrom }} | {{ v.productTime }}</span>
+            <span class="mui-pull-right">{{ v.productComCount }}</span>
           </div>
         </div>
       </a>
@@ -117,6 +94,6 @@
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/productList.js"></script>
+<script src="./js/moneyctrl.js"></script>
 </body>
 </html>
